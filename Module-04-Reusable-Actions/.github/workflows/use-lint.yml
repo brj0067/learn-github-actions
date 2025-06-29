@@ -1,0 +1,10 @@
+name: Use Lint Workflow
+
+on: [push]
+
+jobs:
+  call-linter:
+    uses: ./.github/workflows/lint-reusable.yml
+    with:
+      folder: src/
+
