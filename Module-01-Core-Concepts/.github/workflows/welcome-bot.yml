@@ -1,0 +1,11 @@
+name: PR Welcome Bot
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome
+        run: echo "👋 Thanks @${{ github.actor }} for your contribution!"
+
