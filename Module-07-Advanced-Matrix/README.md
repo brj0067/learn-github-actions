@@ -1,3 +1,43 @@
+# Module 7: Advanced Matrix Builds and Parallel Testing in GitHub Actions
+
+In modern CI pipelines, it's critical to test your code across multiple environments — different Node.js versions, OS platforms, or runtime combinations. GitHub Actions makes this easy using **matrix builds**, which automatically run jobs in parallel.
+
+---
+
+## ✅ What You'll Learn
+
+- How matrix builds scale tests across environments  
+- How to define multiple Node.js versions in one job  
+- How to test on different operating systems  
+- How to exclude or customize matrix combinations  
+- How to name matrix jobs for readability
+
+---
+
+## 1️⃣ Matrix Strategy for Node.js Versions
+
+Use `strategy.matrix` to test the same workflow logic across Node.js versions:
+
+```yaml
+name: Test on Node Versions
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+    name: Node ${{ matrix.node-version }} Test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm test
 Module 7: Advanced Matrix Builds and Parallel Testing in GitHub Actions
 In modern CI pipelines, it's critical to test your code across multiple environments — different Node.js versions, OS platforms, or runtime combinations. GitHub Actions makes this easy using matrix builds, which automatically run jobs in parallel.
 
