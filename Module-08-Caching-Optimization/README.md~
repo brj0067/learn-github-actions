@@ -7,7 +7,7 @@ Speed matters in CI/CD. In this module, you’ll learn to cache dependencies and
 ## ✅ What You'll Learn
 
 - How GitHub Actions caching works  
-- How to cache `node_modules`, `pip`, or build folders  
+- How to cache `node_modules`, `pip`, or `build` folders  
 - How to use `actions/cache@v4` correctly  
 - How to restore and save caches  
 - How to avoid common cache key mistakes
@@ -16,12 +16,12 @@ Speed matters in CI/CD. In this module, you’ll learn to cache dependencies and
 
 ## 🔧 Use Cases
 
-| Platform      | Cache Target           |
-|---------------|------------------------|
-| Node.js       | `node_modules/`        |
-| Python        | `~/.cache/pip`         |
-| Java          | `~/.m2/repository`     |
-| Docker        | Docker build layers    |
+| Platform | Cache Target |
+|----------|--------------|
+| Node.js  | `node_modules/` |
+| Python   | `~/.cache/pip` |
+| Java     | `~/.m2/repository` |
+| Docker   | Build cache directories |
 | React/Next.js | `.next/`, `dist/`, `build/` |
 
 ---
