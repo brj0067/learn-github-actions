@@ -1,3 +1,25 @@
+# 🧠 Module 01 – Core Concepts
+
+Learn the basics of GitHub Actions:
+- Workflows, jobs, steps
+- `on:` triggers
+- `runs-on` runners
+- `env` and `matrix` strategy
+
+---
+
+## 📂 Structure
+
+- `exercises/` – Practice YAMLs
+- `solutions/` – Reference implementations
+
+---
+
+## ✅ What You'll Build
+
+- Hello World CI workflow
+- Matrix strategy with Node.js versions
+- Use of environment variables
 Module 1: Core Concepts & Quickstart with GitHub Actions
 👨‍🏫 Goal: Understand what GitHub Actions is, how it works, and build your first CI workflow to automate a simple process on code push.
 
